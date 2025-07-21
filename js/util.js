@@ -7,6 +7,26 @@ const getRandomInteger = (a, b) => {
   return Math.floor(result);
 };
 
+//Функция получения уникального числа из заданного диапазона
+
+const getUnicalInteger = (min, max) => {
+  const previousValues = [];
+  return () => {
+    let currentValue = getRandomInteger(min, max);
+    if (previousValues.length >= max - min + 1) {
+      console.log('У меня больше нет уникальных значений!');
+      return null;
+    }
+    while (previousValues.includes(currentValue)) {
+      currentValue = getRandomInteger(min, max);
+    }
+    previousValues.push(currentValue);
+    return currentValue
+  };
+};
+
+
+
 const getRandomElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
 
-export { getRandomInteger, getRandomElement };
+export { getRandomInteger, getRandomElement, getUnicalInteger };
