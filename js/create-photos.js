@@ -47,6 +47,6 @@ const createPhoto = () => ({
 });
 
 //Создаем массив
-const createArrayPhotos = () => Array.from({ length: MAX_OBJECT }, createPhoto);
+const createPhotos = () => Array.from({ length: MAX_OBJECT }, createPhoto);
 
-export { createArrayPhotos };
+export { createPhotos };

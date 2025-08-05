@@ -1,7 +1,6 @@
-import './data.js';
-import './createArrayPhotos.js';
-import { createArrayPhotos } from './createArrayPhotos.js';
+import { createPhotos } from './create-photos.js';
+import './thumbnails.js';
 
 console.log(
-  createArrayPhotos()
+  createPhotos()
 );
